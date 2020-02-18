@@ -1,0 +1,297 @@
+
+
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+// general classes
+
+.container {
+  padding: 1rem;
+}
+
+
+.content-block {
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+.content-image-block {
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 800px;
+}
+
+.section-title {
+  margin-bottom: 30PX;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 4.26px;
+  color: #ffffff;
+
+  strong {
+    color: #eb9062;
+  }
+
+  &.bigger {
+    font-size: 48px;
+  }
+}
+
+.section-text {
+  font-size: 22px;
+  letter-spacing: 3.35px;
+  color: #ffffff;
+
+  strong {
+    color: #eb9062;
+  }
+}
+
+.appendix-part {
+  color: #cecece;
+
+  a {
+    color: #cecece;
+    text-decoration: none;
+  }
+}
+
+.banner {
+  padding-top: 70px;
+  background: url("./images/Desktop_pic_1.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+
+  .hero-part {
+    h1 {
+      height: 0;
+      overflow: hidden;
+    }
+
+    .logo-text {
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      color: #ffffff;
+    }
+  }
+}
+
+.caused-by-climate-section {
+  .explain-part {
+    margin-right: 10vw;
+  }
+
+  .appendix-part {
+    max-width: 400px;
+
+    ul {
+
+      li {
+        &:first-child {
+          border-top: 1px solid #979797;
+          margin-top: 0.5rem;
+        }
+        border-bottom: 1px solid #979797;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+}
+.after-caused-by-climate-part {
+  background-image: url("./images/Desktop_pic_2.png");
+  background-image:
+    image-set(
+      url(./images/Desktop_pic_2.png) 1x,
+      url(./images/Desktop_pic_2@2x.png) 2x,
+      url(./images/Desktop_pic_2@3x.png) 3x,
+    );
+  background-size: cover;
+}
+
+.caused-by-coal-section {
+  .explain-part {
+    margin-right: 5vw;
+
+    .appendix-part {
+      margin-top: 60px;
+
+      ul {
+        border-style: solid;
+        border-color: #979797;
+        border-width: 1px 0;
+        padding: 0.5rem 0;
+        margin: 0.5rem 0;
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+    }
+  }
+}
+
+.taipower-backed-section {
+  .section-title {}
+  .section-text {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .chart-title {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  .chart-container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .recharts-cartesian-axis-tick {
+      font-size: 22px;
+      color: #ffffff;
+    }
+  }
+
+  .taipower-history {
+    font-size: 22px;
+    margin-top: 6rem;
+
+    .year {
+      color: #eb9062;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+
+      i.fire {
+        margin-right: 30px;
+        width: 31px;
+        height: 38px;
+        display: block;
+        background-image: url("./images/Desktop_fire.png");
+        background-image:
+          image-set(
+            url(./images/Desktop_fire.png) 1x,
+            url(./images/Desktop_fire@2x.png) 2x,
+            url(./images/Desktop_fire@3x.png) 3x,
+          );
+      }
+    }
+    .action {
+      margin-bottom: 1rem;
+      padding-left: 61px;
+    }
+  }
+}
+
+.after-taipower-backed-section {
+  min-height: 1000px;
+  background-image: url("./images/Desktop_pic_4.png");
+  background-image:
+    image-set(
+      url(./images/Desktop_pic_4.png) 1x,
+      url(./images/Desktop_pic_4@2x.png) 2x,
+      url(./images/Desktop_pic_4@3x.png) 3x,
+    );
+  background-size: cover;
+}
+
+.call-to-action-setion {
+  .section-title {
+    margin-bottom: 90px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    img {
+      margin-right: 50px;
+    }
+  }
+
+  .button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 135px;
+    min-width: 70%;
+    max-width: 50px;
+
+    width: 660px;
+    height: 55px;
+    border-radius: 8px;
+  }
+}
+
+.footer {
+  margin-top: 10rem;
+  background-color: transparent;
+
+  .gp-part {
+    flex: 1;
+    padding-right: 10vw;
+
+    .go-logo {
+      width: 326px;
+    }
+
+    .gp-mission {
+      margin-top: 35px;
+
+      font-size: 18px;
+      line-height: 1.72;
+      color: #9d9d9d;
+    }
+  }
+
+
+  .links-part {
+    max-width: 300px;
+    font-size: 18px;
+    color: #9d9d9d;
+    margin-top: 2rem;
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: #9d9d9d;
+      text-decoration: none;
+    }
+
+    .fa-chevron-right {
+      margin-left: 1.5rem;
+    }
+  }
+
+  hr {
+    height: 1px;
+    background-color: rgba(197, 197, 197, 0.33);
+  }
+
+  .copyright {
+    font-size: 18px;
+    letter-spacing: 2.74px;
+    color: #9d9d9d;
+  }
+}
