@@ -1,0 +1,180 @@
+.en-form {
+	padding: 75px 70px;
+
+	// width: 683px;
+	// height: 419px;
+	border-radius: 8px;
+	box-shadow: 0 2px 33px 0 rgba(0, 0, 0, 0.5);
+	background-color: #111111;
+	font-size: 16px;
+
+	.form-title {
+		font-size: 22px;
+		color: #ffffff;
+		margin-bottom: 2rem;
+	}
+
+	ul {
+		li {
+			margin-bottom: 1rem;
+		}
+		li::before {
+		  content: "•";
+		  font-weight: bold;
+		  color: #eb9062;
+		  margin-left: -1.5rem;
+			display: inline-block;
+			margin-right: 0.5em;
+		}
+	}
+
+	.select:not(.is-multiple):not(.is-loading)::after {
+	    border-color: #eb9062;
+	    margin-top: -17px;
+	    margin-right: -10px;
+	}
+
+	progress {
+		height: 12px;
+		margin-top: 4rem;
+
+		&::-webkit-progress-value {
+		  background-image: linear-gradient(to right, #eb9062 50%, #ec6a00);
+		}
+		&::-moz-progress-bar{
+		  background-image: linear-gradient(to right, #eb9062 50%, #ec6a00);
+		}
+		&::-ms-fill {
+		  background-image: linear-gradient(to right, #eb9062 50%, #ec6a00);
+		}
+	}
+
+	.more-people {
+		font-size: 16px;
+	}
+
+	.is-primary {
+		width: 50%;
+		min-width: 300px;
+		margin: 3rem auto 0;
+		display: block;
+		height: 55px;
+		line-height: 53px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.fake-form {
+		margin-top: 4rem;
+		margin-bottom: 5.5rem;
+
+		label {
+			font-weight: normal;
+			font-size: 16px;
+			color: #b9b9b9;
+			margin-bottom: 0;
+		}
+		input:not([type="checkbox"]), select {
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid #eb9062;
+			border-radius: 0;
+			font-size: 13px;
+		}
+
+		.checkbox {
+			display: flex;
+			flex-direction: row;
+
+
+			.desc {
+				font-size: 14px;
+				color: #eb9062;
+			}
+
+			> input {
+				margin-right: 0.5rem;
+			}
+		}
+
+		> .field {
+			margin-bottom: 1.5rem;
+		}
+
+		.select-birth-year {
+			flex: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.en-form {
+		font-size: 14px;
+		padding: 0.75rem;
+		max-width: 350px;
+		margin: 0 auto;
+		background-color: transparent;
+
+		h2 {
+			color: #eb9062;
+			font-size: 18px;
+			margin-bottom: 1.5rem;
+			text-align: center;
+			font-weight: bold;
+		}
+		h3 {
+			font-size: 14px;
+			text-align: center;
+			font-weight: bold;
+		}
+
+		.progress {
+			height: 6px;
+			margin-bottom: 1rem;
+			margin-top: 4rem;
+		}
+		.more-people {
+			font-size: 14px;
+			margin-bottom: 3.5rem;
+		}
+
+		.fake-form {
+			margin-top: 4rem;
+			margin-bottom: 0.5rem;
+
+			.field-body {
+				display: flex;
+				flex-direction: row;
+
+				.field {
+					&:not(:last-child) {
+						margin-right: 1rem;
+					}
+				}
+
+				.last-name-field {
+					max-width: 30%;
+				}
+				.first-name-field {
+					flex: 1;
+				}
+				.phone-field {
+					flex: 1;
+				}
+			}
+
+			.checkbox {
+				.desc {
+					font-size: 11px;
+				}
+			}
+		}
+
+		.is-primary {
+			margin-top: 0;
+			width: 100%;
+			min-width: auto;
+			max-width: 300px;
+		}
+	}
+}

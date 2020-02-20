@@ -6,7 +6,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:en": "PUBLIC_URL=https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.climate.taipower react-scripts build",
+    "postbuild": "react-snap",
+    "deploy": "yarn run build:en && yarn postbuild && gpea-npm-en-uploader",
+    "upload-en": "gpea-npm-en-uploader"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,12 +32,18 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bulma": "^0.8.0",
+    "classnames": "^2.2.6",
+    "formik": "^2.1.4",
+    "gpea-npm-en-uploader": "../gpea-npm-en-uploader",
+    "mitt": "^1.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.4.0",
-    "recharts": "^2.0.0-beta.1"
+    "recharts": "^2.0.0-beta.1",
+    "yup": "^0.28.1"
   },
   "devDependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.13.1",
+    "react-snap": "^1.23.0"
   }
 }

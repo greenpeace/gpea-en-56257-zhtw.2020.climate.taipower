@@ -11,7 +11,6 @@ body {
   padding: 1rem;
 }
 
-
 .content-block {
   padding-top: 10rem;
   padding-bottom: 3rem;
@@ -23,10 +22,10 @@ body {
 }
 
 .section-title {
-  margin-bottom: 30PX;
+  margin-bottom: 30px;
   font-size: 28px;
   font-weight: 600;
-  letter-spacing: 4.26px;
+  letter-spacing: 1px;
   color: #ffffff;
 
   strong {
@@ -40,7 +39,6 @@ body {
 
 .section-text {
   font-size: 22px;
-  letter-spacing: 3.35px;
   color: #ffffff;
 
   strong {
@@ -110,7 +108,7 @@ body {
   }
 }
 .after-caused-by-climate-part {
-  background-image: url("./images/Desktop_pic_2.png");
+  background: url("./images/Desktop_pic_2.png");
   background-image:
     image-set(
       url(./images/Desktop_pic_2.png) 1x,
@@ -118,6 +116,7 @@ body {
       url(./images/Desktop_pic_2@3x.png) 3x,
     );
   background-size: cover;
+  background-position: center center;
 }
 
 .caused-by-coal-section {
@@ -229,6 +228,23 @@ body {
     }
   }
 
+
+  .this-icon {
+    width: 94px;
+    height: 68px;
+    margin-right: 3rem;
+    flex: 0 0 94px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .icon-beach {
+    background-image: url("./images/mobile-icon-1.svg");
+  }
+
+  .icon-hands {
+    background-image: url("./images/mobile-icon-2.svg");
+  }
+
   .button {
     display: block;
     margin: 0 auto;
@@ -291,7 +307,248 @@ body {
 
   .copyright {
     font-size: 18px;
-    letter-spacing: 2.74px;
     color: #9d9d9d;
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .columns:not(.is-desktop) {
+    display: block;
+  }
+  .columns {
+    margin: 0;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 16px;
+    margin-bottom: 1rem;
+
+    &.bigger {
+      font-size: 16px;
+    }
+  }
+
+  .section-text {
+    font-size: 14px;
+  }
+  .content-image-block {
+    min-height: 380px;
+    height: 50vh;
+  }
+  .content-block {
+    padding-top: 3rem;
+    padding-bottom: 0;
+  }
+
+  .banner {
+    padding-top: 0;
+    .container {
+      padding: 0;
+    }
+
+    .hero-part {
+      width: 80vw;
+      max-width: 200px;
+      margin: 0 auto;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .logo-text {
+        margin-top: 20vh;
+        margin-bottom: 1.5rem;
+      }
+
+      h2 {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 5.5rem;
+      }
+
+      .go-logo {
+        max-width: 130px;
+      }
+
+      .space-eater {
+        flex: 1;
+      }
+
+      .go-down-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-end;
+      }
+
+      .go-down-icon {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .mobile-form {
+    background-color: #111111;
+    background: linear-gradient(#111111, #000000);
+  }
+
+  .caused-by-climate-section {
+    .explain-part {
+      margin-right: 0;
+    }
+
+    .appendix-part {
+      font-size: 10px;
+      margin-top: 1.25rem;
+      max-width: 100%;
+    }
+  }
+
+  .coal-image {
+    width: 100%;
+    height: 15rem;
+    padding: 0.75rem;
+
+    background-image: url("./images/Desktop_pic_3.png");
+    background-image:
+      image-set(
+        url(./images/Desktop_pic_3.png) 1x,
+        url(./images/Desktop_pic_3@2x.png) 2x,
+        url(./images/Desktop_pic_3@3x.png) 3x,
+      );
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .caused-by-coal-section {
+    .explain-part {
+      margin-right: 0;
+    }
+
+    .appendix-part {
+      margin-top: 3rem;
+      font-size: 10px;
+    }
+  }
+
+  .taipower-backed-section {
+    .chart-title {
+      margin-top: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .chart-data-source {
+      font-size: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .chart-container {
+      .recharts-cartesian-axis-tick {
+        font-size: 12px;
+      }
+    }
+
+    .taipower-history {
+      font-size: 16px;
+      margin-top: 2rem;
+
+      .year {
+        margin-bottom: 0;
+
+        i.fire {
+          margin-right: 15px;
+          width: 11px;
+          height: 18px;
+          background-image: url("./images/mobile-fire-2.png");
+          background-image:
+            image-set(
+              url(./images/mobile-fire-2.png) 1x,
+              url(./images/mobile-fire-2@2x.png) 2x,
+              url(./images/mobile-fire-2@3x.png) 3x,
+            );
+        }
+      }
+      .action {
+        margin-bottom: 1.5rem;
+        padding-left: 26px;
+      }
+    }
+  }
+
+  .call-to-action-setion {
+    .section-title {
+      margin-bottom: 2rem;
+    }
+
+    .this-icon {
+      width: 47px;
+      height: 34px;
+      margin-right: 1rem;
+      flex: 0 0 47px;
+    }
+
+    .button {
+      margin-top: 50px;
+    }
+  }
+
+  .footer {
+    margin-top: 1rem;
+
+    .column {
+      padding: 0;
+    }
+
+    .gp-part {
+      padding: 0;
+
+      .go-logo {
+        width: 160px;
+      }
+
+      .gp-mission {
+        font-size: 13px;
+        margin-top: 1rem;
+      }
+    }
+
+    .links-part {
+      font-size: 13px;
+      margin-top: 1.25rem;
+      margin-right: 0;
+      max-width: 100%;
+
+      li {
+        border-top: 1px solid #979797;
+        padding: 0.5rem 0.5rem 0.5rem 0;
+        margin: 0;
+
+
+        &:last-child {
+          border-bottom: 1px solid #979797;
+        }
+
+        a {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          span {
+            flex: 1;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      font-size: 13px;
+      text-align: left;
+    }
   }
 }

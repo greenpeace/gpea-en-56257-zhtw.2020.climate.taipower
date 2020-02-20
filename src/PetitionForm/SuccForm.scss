@@ -1,0 +1,29 @@
+.share-part {
+	margin-top: 4.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	p {}
+
+	a {
+		color: white;
+		font-size: 48px;
+		margin-left: 1rem;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.share-part {
+		margin-top: 3rem;
+		margin-bottom: 4.5rem;
+
+		p {}
+
+		a {
+			color: white;
+			font-size: 36px;
+			margin-left: 1rem;
+		}
+	}
+}

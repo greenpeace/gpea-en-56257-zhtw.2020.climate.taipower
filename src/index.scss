@@ -3,41 +3,13 @@
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 
-// Set your brand colors
-// $gp-green: #;
-// $pink: #fa7c91;
-// $brown: #757763;
-// $beige-light: #d0d1cd;
-// $beige-lighter: #eff0eb;
-
-// Update Bulma's global variables
 $family-sans-serif: "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "Roboto Sans", sans-serif;
-// $grey-dark: $brown;
-// $grey-light: $beige-light;
-$primary: #ef7c42;
-// $link: "#ef7c42";
-// $widescreen-enabled: false;
-// $fullhd-enabled: false;
-//
 
+$primary: #ef7c42;
 $text-strong: #eb9062;
 
-// Update some of Bulma's component variables
-// $body-background-color: $beige-lighter;
-// $control-border-width: 2px;
-// $input-border-color: transparent;
-// $input-shadow: none;
-
-// Import only what you need from Bulma
-// @import '../node_modules/bulma/sass/utilities/_all.sass';
-// @import '../node_modules/bulma/sass/base/_all.sass';
-// @import '../node_modules/bulma/sass/elements/button.sass';
-// @import '../node_modules/bulma/sass/elements/container.sass';
-// @import '../node_modules/bulma/sass/elements/form.sass';
-// @import '../node_modules/bulma/sass/elements/title.sass';
-// @import '../node_modules/bulma/sass/components/navbar.sass';
-// @import '../node_modules/bulma/sass/layout/hero.sass';
-// @import '../node_modules/bulma/sass/layout/section.sass';
+$progress-value-background-color: #ec6a00;
+$progress-bar-background-color: #272525;
 
 @import "../node_modules/bulma/sass/utilities/_all.sass";
 @import "../node_modules/bulma/sass/base/_all.sass";
