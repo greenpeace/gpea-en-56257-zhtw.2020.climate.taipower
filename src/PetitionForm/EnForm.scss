@@ -1,5 +1,7 @@
 .en-form {
-	padding: 75px 70px;
+	padding: 50px 45px;
+	// max-width: 400px;
+	margin: 0 auto;
 
 	// width: 683px;
 	// height: 419px;
@@ -30,30 +32,19 @@
 
 	.select:not(.is-multiple):not(.is-loading)::after {
 	    border-color: #eb9062;
-	    margin-top: -17px;
+	    margin-top: -10px;
 	    margin-right: -10px;
 	}
 
-	progress {
-		height: 12px;
-		margin-top: 4rem;
-
-		&::-webkit-progress-value {
-		  background-image: linear-gradient(to right, #eb9062 50%, #ec6a00);
-		}
-		&::-moz-progress-bar{
-		  background-image: linear-gradient(to right, #eb9062 50%, #ec6a00);
-		}
-		&::-ms-fill {
-		  background-image: linear-gradient(to right, #eb9062 50%, #ec6a00);
-		}
+	.progressbar {
+		margin: 2rem auto 1rem auto;
 	}
 
 	.more-people {
 		font-size: 16px;
 	}
 
-	.is-primary {
+	.button.is-primary {
 		width: 50%;
 		min-width: 300px;
 		margin: 3rem auto 0;
@@ -66,7 +57,7 @@
 
 	.fake-form {
 		margin-top: 4rem;
-		margin-bottom: 5.5rem;
+		margin-bottom: 1rem;
 
 		label {
 			font-weight: normal;
@@ -170,7 +161,7 @@
 			}
 		}
 
-		.is-primary {
+		.button.is-primary {
 			margin-top: 0;
 			width: 100%;
 			min-width: auto;

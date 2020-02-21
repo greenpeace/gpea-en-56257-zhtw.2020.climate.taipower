@@ -1,0 +1,36 @@
+.progressbar {
+	.progressbar-container {
+		background-color: #272525;
+		border-radius: 8px;
+		height: 14px;
+		box-shadow: inset 0 1px 6px 0 rgba(17, 15, 15, 0.8);
+		display: flex;
+		align-items: center;
+		margin-top: 25px;
+		padding: 0 5px;
+
+		.progressbar-progress {
+			width: 0%;
+			transition: 2000ms all;
+
+			height: 6px;
+			border-radius: 5px;
+			background-image: linear-gradient(to right, #eb9062 50%, #ec6a00);
+
+
+			.child-wrapper {
+				text-align: right;
+				margin-top: -25px;
+				opacity: 14;
+				transition: 1000ms all;
+				color: #eb9062;
+				font-size: 12px;
+
+				&.is-animating {
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+

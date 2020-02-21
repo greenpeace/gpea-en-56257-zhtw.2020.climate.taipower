@@ -7,11 +7,9 @@ import useWindowSize from "../lib/use-window-size.js"
 const data = [
 	{name: '1985', amt: 8},
 	{name: '2010', amt: 14},
-	{name: '2012', amt: 18.2},
+	{name: '2014', amt: 18.2},
 	{name: '2018', amt: 61.2},
 ];
-
-
 
 export default (props) => {
 	const {innerHeight, innerWidth, outerHeight, outerWidth} = useWindowSize()
@@ -20,9 +18,7 @@ export default (props) => {
 	let isMobile = innerWidth<1024;
 
 	const CustomizedLabel = (props) => {
-		const {
-			x,y, stroke, payload, value,
-		} = props;
+		const {x,y, value} = props;
 
 		return (
 			<text x={x} y={y}
@@ -34,9 +30,7 @@ export default (props) => {
 	};
 
 	const CustomizedDot = (props) => {
-		const {
-			cx, cy, stroke, payload, value,
-		} = props;
+		const {cx, cy, value} = props;
 
 		return (
 			<image key={cx}
@@ -73,8 +67,8 @@ export default (props) => {
 			<XAxis
 				dataKey="name"
 				padding={{
-					left:isMobile ? 60 : 100,
-					right:isMobile ? 40 : 100
+					left:isMobile ? 30 : 100,
+					right:isMobile ? 30 : 100
 				}}
 				stroke="#FFFFFF"
 				strokeWidth={isMobile ? 1:3}

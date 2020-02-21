@@ -1,6 +1,5 @@
 //@see https://github.com/rehooks/window-size/blob/master/index.js
 
-'use strict';
 let { useState, useEffect } = require('react');
 
 function getSize() {

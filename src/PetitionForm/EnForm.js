@@ -3,8 +3,9 @@ import cx from "classnames";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-import {resolveEnPagePetitionStatus, resolveInitFormValues} from "./formHelpers";
-import {FORMIK_KEY_TO_EN_KEY, EMAIL_DOMAINS} from "./config";
+import ProgressBar from "../ProgressBar/ProgressBar.js"
+
+import {FORMIK_KEY_TO_EN_KEY} from "./config";
 
 const numBirthYears = 100
 const currYear = new Date().getFullYear()
@@ -14,12 +15,9 @@ for (var i = 0; i<numBirthYears; i++) {
 }
 
 export default (props) => {
-	const targetPetitionNumber = 30000
+	const targetPetitionNumber = 50000
 	const [isOpened, setIsOpend] = useState(props.isOpened)
 	const fakeForm = useRef()
-
-	console.log('props', props)
-	console.log('props.isOpened', props.isOpened)
 
 	const errorMessages = {
 	  required: "必填欄位 This is required",
@@ -104,20 +102,46 @@ export default (props) => {
 		}
 	}, [isOpened, fakeForm])
 
+	// fetch the petition numbers
+	const baseNumber = Math.floor(Math.sqrt(new Date())/500) // make it more
+	const [petitionNumber, setPetitionNumber] = useState(baseNumber)
+
+	useEffect(() => {
+		fetch("https://cors-anywhere.arpuli.com/https://e-activist.com/ea-dataservice/data.service?service=EaDataCapture&token=7a06c0fc-32fe-43f1-8a1b-713b3ea496e1&campaignId=173932&contentType=json&resultType=summary")
+			.then(response => response.json())
+			.then(response => {
+				if (response && response.rows) {
+					let row = response.rows[0]
+					let columns = row.columns
+
+					// find that value
+					columns.forEach(c => {
+						if (c.name==="participations") {
+							setPetitionNumber(parseInt(c.value, 10)+baseNumber)
+						}
+					})
+				}
+			})
+			.catch(err => {
+				console.error(err)
+			})
+	}, [])
+
+
 	return (<div>
 		<div className="is-hidden-desktop">
 			<h2>立 即 連 署</h2>
-			<h3>要求台電撤回海外煤炭投資 <br/>停止犧牲環境與氣候獲利！</h3>
+			<h3>要求台電撤回海外煤炭投資<br/>停止犧牲環境與氣候獲利！</h3>
 
-			<progress className="progress" value={12345} max={targetPetitionNumber}>15%</progress>
-			<p className="more-people">號招更多朋友參與，達到目標： {Number(targetPetitionNumber).toLocaleString("zh-TW")} 人</p>
+			<ProgressBar value={petitionNumber} max={targetPetitionNumber} />
+			<p className="more-people">號召更多朋友參與，達到目標： {Number(targetPetitionNumber).toLocaleString()} 人</p>
 		</div>
 
 		<div className="is-hidden-touch">
 			<h2 className="form-title ">立即連署，要求台電撤回海外煤炭投資   停止犧牲環境與氣候獲利！</h2>
 		</div>
 
-		<ul>
+		<ul className="is-hidden-desktop">
 			<li>相同金額用於再生能源投資推估可裝設太陽能光電裝置容量 100,000 瓩，供 29,000 戶家庭一年用電所需。 </li>
 			<li>綠色和平會將您的連署轉交台電或用於法律與政策修訂以<strong>減少臺灣國營事業對海外煤炭投資。</strong></li>
 		</ul>
@@ -263,8 +287,8 @@ export default (props) => {
 		</form> }
 
 		<div className="is-hidden-touch">
-			<progress className="progress" value={12345} max={targetPetitionNumber}>15%</progress>
-			<p className="more-people">號招更多朋友參與，達到目標： {Number(targetPetitionNumber).toLocaleString("zh-TW")} 人</p>
+			<ProgressBar value={petitionNumber} max={targetPetitionNumber} />
+			<p className="more-people">號召更多朋友參與，達到目標： {Number(targetPetitionNumber).toLocaleString("zh-TW")} 人</p>
 		</div>
 
 		{ !isOpened &&

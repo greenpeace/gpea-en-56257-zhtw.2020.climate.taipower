@@ -9,7 +9,7 @@
     "eject": "react-scripts eject",
     "build:en": "PUBLIC_URL=https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.climate.taipower react-scripts build",
     "postbuild": "react-snap",
-    "deploy": "yarn run build:en && yarn postbuild && gpea-npm-en-uploader",
+    "deploy": "yarn run build:en && react-snap && gpea-npm-en-uploader",
     "upload-en": "gpea-npm-en-uploader"
   },
   "eslintConfig": {
@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "node-sass": "^4.13.1",
-    "react-snap": "^1.23.0"
+    "react-snap": "^1.23.0",
+    "react-snap": "^1.3.0"
   }
 }
