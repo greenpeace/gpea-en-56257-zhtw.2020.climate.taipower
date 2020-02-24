@@ -3,6 +3,7 @@ import PetitionForm from "./PetitionForm"
 import InvestmentChart from "./InvestmentChart/InvestmentChart"
 import mitt from "mitt";
 import cx from "classnames";
+import useWindowSize from "./lib/use-window-size.js"
 import bgVideo from './images/desktop_bg_h265.mp4'
 
 import './App.scss';
@@ -58,6 +59,7 @@ function App() {
     }
   }
 
+  // makesure the video is playing
   const videoRef = useRef()
   const [videoIsPlaynig, setVideoIsPlaynig] = useState(false)
   useEffect(() => {
@@ -106,7 +108,7 @@ function App() {
                   src={require("./images/Desktop_typography.png")}
                   srcSet={`${require("./images/Desktop_typography@2x.png")} 1.5x, ${require("./images/Desktop_typography@3x.png")} 2x`}
                 />
-                <h2 className="title is-3">台電，請撤回海外煤炭投資，為澳洲大火負責！</h2>
+                <h2 className="title is-3">台電，請撤回海外煤炭投資，別讓澳洲大火憾事重演！</h2>
 
                 <img
                   className="go-logo is-hidden-desktop"
@@ -115,7 +117,7 @@ function App() {
                   srcSet={`${require("./images/gplogo@2x.png")} 1.5x, ${require("./images/gplogo@3x.png")} 2x`}
                 />
 
-                <div className="space-eater is-hidden-desktop"></div>
+                <div className="space-eaterx is-hidden-desktop"></div>
 
                 <img
                   alt="看更多"
@@ -202,16 +204,6 @@ function App() {
         <div className="container">
             <h3 className="section-title bigger has-text-centered">台電 — <strong>澳洲班卡拉煤礦場產業幕後金主</strong></h3>
 
-            <div className="is-hidden-touch">
-              <p className="section-text has-text-centered is-hidden-touch">
-                累積投資金額超過 60 億新台幣
-              </p>
-
-              <p className="section-text chart-title">
-                台電投資澳洲班卡拉煤礦合資企業累積金額圖表
-              </p>
-            </div>
-
             <div className="is-hidden-desktop">
               <h3 className="section-title bigger has-text-centered is-hidden-desktop">
                 <strong>累積投資金額超過 60 億新台幣</strong>
@@ -229,13 +221,9 @@ function App() {
 
             </div>
 
-            <div className="chart-container">
+            <div className="chart-container is-hidden-desktop">
               <InvestmentChart />
             </div>
-
-            <p className="section-text chart-data-source has-text-right is-hidden-touch">
-              資料來源：台電公司班卡拉煤礦大事記
-            </p>
 
             <ul className="taipower-history">
               <li>
@@ -271,7 +259,7 @@ function App() {
 
           <div className="row section-text">
             <div className="this-icon icon-beach"></div>
-            <p className="">相同金額用於再生能源投資<br/>年發電量至少超過 1.8 億度，可供約 5 萬戶家庭整年用電</p>
+            <p className="">相同金額用於再生能源投資，年發電量至少超過 1.8 億度，可供約 5 萬戶家庭整年用電。</p>
           </div>
 
           <div className="row section-text">

@@ -6,7 +6,7 @@ import {GetSocialMediaSiteLinks_WithShareLinks} from "../lib/social-share-media.
 const shareArgs = {
 	url: "https://act.gp/2Hzhhw3",
 	title: "澳洲大火 台電有責",
-	desc: "立即連署，要求台電撤回海外煤炭投資  停止犧牲環境與氣候獲利！"
+	desc: "立即連署，要求台電撤回海外煤炭投資，停止犧牲環境與氣候來獲利！"
 }
 const fbShareLinks = GetSocialMediaSiteLinks_WithShareLinks(Object.assign({}, shareArgs, {
 	url: "https://act.gp/2Hzhhw3"
@@ -19,17 +19,33 @@ export default (props) => {
 	const thisRef = useRef()
 	const handleClickShare = () => {
 		if (navigator.share) {
-		  // we can use web share!
-		  navigator
-		    .share({
-		      url: shareArgs.url,
-		      title: "",
-		      text: shareArgs.title + (shareArgs.desc ? ":"+shareArgs.desc : "")
-		    })
-		    .then(() => console.log("Successfully shared"))
-		    .catch(error => console.log("Error sharing:", error));
+			// we can use web share!
+			navigator
+				.share({
+					url: shareArgs.url,
+					title: "",
+					text: shareArgs.title + (shareArgs.desc ? ":"+shareArgs.desc : "")
+				})
+				.then(() => console.log("Successfully shared"))
+				.catch(error => console.log("Error sharing:", error));
 		}
 	}
+
+	// scroll to this form
+	const [hasRendered, setHasRendered] = useState(false);
+	useEffect(() => {
+		if (!hasRendered) {
+			if (window.innerWidth<1024) { // only scroll on mobile
+				window.scrollTo({
+						top: window.innerHeight*0.9,
+						behavior: 'smooth'
+				})
+			}
+		}
+
+		setHasRendered(true)
+	}, [])
+
 
 	const broswerSupportShare = navigator.share
 
@@ -40,7 +56,7 @@ export default (props) => {
 		</h2>
 
 		<ul>
-			<li>請請持續關注和分享澳洲大火及氣候危機等訊息。</li>
+			<li>請持續關注和分享澳洲大火及氣候危機等訊息。</li>
 			<li>綠色和平長期進行臺灣能源轉型工作，與公民團體共同阻止深澳燃煤電廠興建、敦促政府修訂《電業法》、監督大企業使用再生能源。氣候危機迫在眉睫，能源轉型是最佳解法，請支持綠色和平的氣候專案工作！</li>
 		</ul>
 

@@ -66,15 +66,15 @@ body {
   padding-top: 20vh;
   background-image: url("./images/Desktop_pic_1.png");
   background-image: image-set(
-    url(./images/mobile-fire-2.png) 1x,
-    url(./images/mobile-fire-2@2x.png) 2x,
-    url(./images/mobile-fire-2@3x.png) 3x,
+    url(./images/Desktop_pic_1.png) 1x,
+    url(./images/Desktop_pic_1@2x.png) 2x,
+    url(./images/Desktop_pic_1@3x.png) 3x,
   );
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 600px;
+  // background-attachment: fixed;
+  min-height: 100vh;
 
   &.vide-playing {
     background-image: none;
@@ -86,8 +86,8 @@ body {
     bottom: 0;
     width: 100%;
     height: 100%;
+
     overflow: hidden;
-    padding-bottom: -0.75rem;
 
     //@see https://codepen.io/shshaw/pen/OVGWLG
     video {
@@ -175,6 +175,7 @@ body {
 
 .caused-by-coal-section {
   .explain-part {
+    margin-top: 1rem;
     margin-right: 5vw;
 
     .appendix-part {
@@ -410,12 +411,6 @@ body {
 
   .banner {
     padding-top: 0;
-    background-image: url("./images/mobile_pic1.png");
-    background-image: image-set(
-      url(./images/mobile_pic1.png) 1x,
-      url(./images/mobile_pic1@2x.png) 2x,
-      url(./images/mobile_pic1@3x.png) 3x,
-    );
 
     .container {
       padding: 0;
@@ -450,15 +445,9 @@ body {
         flex: 1;
       }
 
-      .go-down-wrapper {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-items: flex-end;
-      }
-
       .go-down-icon {
-        margin-bottom: 2rem;
+        // margin-bottom: 4.5rem;
+        margin-top: 10vh;
       }
     }
   }
@@ -647,14 +636,14 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .banner {
-    background-image: url("./images/mobile_pic1.png");
-    background-image: image-set(
-      url(./images/mobile_pic1.png) 1x,
-      url(./images/mobile_pic1@2x.png) 2x,
-      url(./images/mobile_pic1@3x.png) 3x,
-    );
-  }
+  // .banner {
+  //   background-image: url("./images/mobile_pic1.png");
+  //   background-image: image-set(
+  //     url(./images/mobile_pic1.png) 1x,
+  //     url(./images/mobile_pic1@2x.png) 2x,
+  //     url(./images/mobile_pic1@3x.png) 3x,
+  //   );
+  // }
 
   .after-caused-by-climate-part {
     background-image: url("./images/mobile_pic2.png");
@@ -685,5 +674,11 @@ body {
         url(./images/mobile_pic4@2x.png) 2x,
         url(./images/mobile_pic4@3x.png) 3x,
       );
+  }
+}
+
+@media only screen and (max-height: 568px) {
+  .banner .hero-part .logo-text {
+    margin-top: 10vh;
   }
 }

@@ -55,6 +55,18 @@
 		padding-bottom: 0;
 	}
 
+	.close-btn {
+		cursor: pointer;
+		color: rgba(255,255,255,0.5);
+		position: absolute;
+		right: 1.75rem;
+		top: 1.5rem;
+
+		&:hover {
+			color: white;
+		}
+	}
+
 	.fake-form {
 		margin-top: 4rem;
 		margin-bottom: 1rem;
