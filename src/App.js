@@ -87,7 +87,7 @@ function App() {
         "vide-playing": videoIsPlaynig
       })}>
         <div className="video-wrapper">
-          <video id="video" src={bgVideo} autoplay loop muted ref={videoRef}>
+          <video id="video" src={bgVideo} autoPlay loop muted ref={videoRef}>
             <source src={bgVideo} type="video/mp4" />
           </video>
         </div>
@@ -156,7 +156,7 @@ function App() {
             <div className="column appendix-part">
               <h4>資料來源</h4>
               <ul>
-                <li><a href="https://www.greenpeace.org/taiwan/update/12351/%E6%BE%B3%E6%B4%B2%E5%A4%A7%E7%81%AB%E7%9A%845%E5%80%8B%E7%9C%9F%E7%9B%B8%EF%BC%9A%E7%81%AB%E7%81%BD%E5%8E%9F%E5%9B%A0%EF%BC%9F%E6%88%91%E5%80%91%E8%83%BD%E6%80%8E%E9%BA%BC%E5%81%9A%EF%BC%9F/" title="Greenpeace 綠色和平：澳洲大火的 5 個真相">Greenpeace 綠色和平：澳洲大火的 5 個真相</a></li>
+                <li><a href="https://act.gp/2SLQcfP" title="Greenpeace 綠色和平：澳洲大火的 5 個真相" target="_blank" >Greenpeace 綠色和平：澳洲大火的 5 個真相</a></li>
                 <li> Photo Credit: © Jimboomba Police</li>
               </ul>
             </div>
@@ -202,10 +202,16 @@ function App() {
 
       <section className="content-block taipower-backed-section">
         <div className="container">
-            <h3 className="section-title bigger has-text-centered">台電 — <strong>澳洲班卡拉煤礦場產業幕後金主</strong></h3>
+            <h3 className="section-title bigger has-text-centered">台電 — <strong>澳洲班卡拉煤礦場幕後金主</strong></h3>
+
+            <div className="is-hidden-touch">
+              <h3 className="section-title has-text-centered">
+                累積投資金額超過 60 億新台幣
+              </h3>
+            </div>
 
             <div className="is-hidden-desktop">
-              <h3 className="section-title bigger has-text-centered is-hidden-desktop">
+              <h3 className="section-title bigger has-text-centered">
                 <strong>累積投資金額超過 60 億新台幣</strong>
               </h3>
 
@@ -227,20 +233,20 @@ function App() {
 
             <ul className="taipower-history">
               <li>
-                <div className="year"><i className="fire"></i><span>1985</span></div>
-                <div className="action">台電參與班卡拉煤礦開發投資計畫，投資約<strong> 8 億元新台幣</strong>，取得澳洲班卡拉煤礦 10% 權益。</div>
+                <div className="year"><i className="fire"></i><span>1995</span></div>
+                <div className="action">台電參與班卡拉煤礦開發投資計畫，投資約<strong> 8 億元新台幣</strong>，取得澳洲班卡拉煤礦 10% 股權。</div>
               </li>
               <li>
-                <div className="year"><i className="fire"></i><span>2010</span></div>
-                <div className="action">分階段增加投資 <strong>6 億</strong>，再進行第一階段擴產，依權益比例投入資本支出約 1,406 萬澳元（約 10.2 億元新台幣）。</div>
+                <div className="year"><i className="fire"></i><span>2012</span></div>
+                <div className="action">分階段增加投資 <strong>6 億</strong>，再進行第一階段擴產，依股權比例投入資本支出約 1,406 萬澳元（約 10.2 億元新台幣）。</div>
               </li>
               <li>
                 <div className="year"><i className="fire"></i><span>2014</span></div>
-                <div className="action">台電進行<strong>第二階段擴產</strong>，依權益比例投入資本支出約 259 萬澳元（約 5 千萬元新台幣）。</div>
+                <div className="action">台電進行<strong>第二階段擴產</strong>，依股權比例投入資本支出約 259 萬澳元（約 5 千萬元新台幣）。</div>
               </li>
               <li>
                 <div className="year"><i className="fire"></i><span>2018</span></div>
-                <div className="action">台電出資 2.15 億澳元（約 43 億元新台幣）購得額外 10% 權益，<strong>台電持有之班卡拉煤礦權益佔比自 10% 增為 20%</strong>。</div>
+                <div className="action">台電出資 2.15 億澳元（約 43 億元新台幣）購得額外 10% 股權，<strong>台電持有之班卡拉煤礦股權佔比自 10% 增為 20%</strong>。</div>
               </li>
 
             </ul>
@@ -291,7 +297,7 @@ function App() {
             <div className="column links-part">
               <ul className="links">
                 <li><a href="https://act.gp/2vLeqOd" target="_blank" alt="回到主頁"><span>回到主頁</span> <i className="fas fa-chevron-right"></i></a></li>
-                <li><a href="https://act.gp/32ccqKP" target="_blank" alt="捐助支持"><span>捐助支持</span> <i className="fas fa-chevron-right"></i></a></li>
+                <li><a href="https://act.gp/32ccqKP" target="_blank" alt="支持我們"><span>支持我們</span> <i className="fas fa-chevron-right"></i></a></li>
                 <li><a href="https://act.gp/2uXxBnQ" target="_blank" alt="隱私政策與個人資料收集聲明"><span>隱私政策與個人資料收集聲明</span> <i className="fas fa-chevron-right"></i></a></li>
               </ul>
             </div>

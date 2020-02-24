@@ -5,8 +5,8 @@ import useWindowSize from "../lib/use-window-size.js"
 // import LogoText from
 
 const data = [
-	{name: '1985', amt: 8},
-	{name: '2010', amt: 14},
+	{name: '1995', amt: 8},
+	{name: '2012', amt: 14},
 	{name: '2014', amt: 18.2},
 	{name: '2018', amt: 61.2},
 ];
